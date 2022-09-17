@@ -599,7 +599,7 @@
                 </div>
             </section>
             <!--==================== CONTACT ME ====================-->
-            <section class="contact section" id="contact">
+            <section class="contact section" id="contactme">
                 <h2 class="section__title">Contact Me</h2> 
                 <span class="section__subtitle">Get in touch</span>
      
@@ -624,7 +624,7 @@
                             </div>
                         </div>
                     </div>
-                        <form action="" class="contact__form grid">
+                        <form onsubmit="sendEmail(); reset(); return false;" action="" class="contact__form grid">
                             <div class="contact_inputs grid">
                                 <div class="contact__content">
                                     <label for="" class="contact__label">Name</label>
@@ -648,8 +648,23 @@
                                 </a>
                             </div>
                         </form>
-                
-                </div>
+                    </div>
+                    <script src="https://smtpjs.com/v3/smtp.js"></script>
+                    <script>
+                        function sendEmail(){
+                            Email.send({
+                                Host : "smtp.gmail.com",
+                                Username : "umarrasooldev@gmail.com",
+                                Password : "password",
+                                To : 'them@website.com',
+                                From : "you@isp.com",
+                                Subject : "This is the subject",
+                                Body : "And this is the body"
+                            }).then(
+                            message => alert(message)
+                            );
+                        }
+                    </script>
             </section>
         </main>
 
@@ -657,6 +672,7 @@
         <footer class="footer">
             <div class="footer__bg">
                 <div class="footer__container container grid">
+                    <div class="footer__content grid">
                     <div>
                         <h1 class="footer__title">Umar</h1>
                         <span class="footer__subtitle">Fullstack Developer</span>
@@ -664,30 +680,36 @@
 
                     <ul class="footer__links">
                         <li>
-                            <a href="#services" class="footer__link">Services</a>
+                            <a href="#home" class="footer__link">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about" class="footer__link">About</a>
+                        </li>
+                        <li>
+                            <a href="#skills" class="footer__link">Skills</a>
+                        </li>
+                        <li>
+                            <a href="#qualifications" class="footer__link">Qualifications</a>
                         </li>
                         <li>
                             <a href="#portfolio" class="footer__link">Portfolio</a>
                         </li>
                         <li>
-                            <a href="#contact" class="footer__link">Contact Me</a>
+                            <a href="#contact" class="footer__link">Contact</a>
                         </li>
                     </ul>
 
-                    <div class="footer__socials">
-                        <a href="https://www.instagram.com/umarrasool.ca/?hl=en" target="_blank" class="footer__social">
-                            <i class="uil uil-instagram"></i>
-                        </a>
+                <div class="footer__socials">
+                    <a href="https://www.linkedin.com/in/umarrasool15/" target="_blank" class="home__social-icon">
+                        <i class="uil uil-linkedin-alt"></i>
+                    </a>
 
-                        <a href="https://www.linkedin.com/in/umarrasool15/" target="_blank" class="footer__social">
-                            <i class="uil uil-linkedin-alt"></i>
-                        </a>
-
-                        <a href="https://twitter.com/triptomar1" target="_blank" class="footer__social">
-                            <i class="uil uil-twitter-alt"></i>
-                        </a>
-                    </div>
+                    <a href="https://github.com/triptomar1" target="_blank" class="home__social-icon">
+                        <i class="uil uil-github-alt"></i>
+                    </a>
                 </div>
+                </div>
+            </div>
 
                 <p class="footer__copy">Website Created by Umar Rasool</p>
             </div>
