@@ -77,6 +77,8 @@
             <section class="home section" id="home">
                 <div class="home__container container grid">
                     <div class="home__content grid">
+
+                        
                         <div class="home__social">
                             <a href="https://www.linkedin.com/in/umarrasool/" target="_blank" class="home__social-icon">
                                 <i class="uil uil-linkedin-alt"></i>
@@ -106,26 +108,30 @@
 
                                 </g>
                             </svg>
-                        </div>
+                       </div>
 
                         <div class="home__data">
-                            <h1 class="home__title">Hi, my name is Umar Rasool</h1>
-                            <h3 class="home__subtitle">Aspiring devloper. <br>Lifelong learner.</h3>
+                            <video autoplay muted loop>
+                                <source src="background.mp4" type="video/mp4">
+                            </video>
+                            <div class="content">
+                                <h1 class="home__title">Hi, my name is Umar Rasool</h1>
+                            <h3 class="home__subtitle">Aspiring developer. <br>Lifelong learner.</h3>
                             <p class="home_description">Seeking Internships for Spring 2023.</p>
+                            </div>
                             <br>
                             <a href="#contactme" class="button button--flex">
                                 Contact Me <i class="uil uil-message button__icon"></i>
                             </a>
                         </div>
-                    </div>
-
-                    <div class="home__scroll">
-                       <a href="#about" class="home__scroll-button button--flex">
-                        <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                        <span class="home__scroll-name">Scroll down</span>
-                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
-                       </a> 
-                    </div>
+                    <br>
+                        <div class="home__scroll">
+                        <a href="#about" class="home__scroll-button button--flex">
+                            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                            <span class="home__scroll-name">Scroll down</span>
+                            <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                        </a> 
+                        </div>
                 </div>
                 
             </section>
@@ -349,7 +355,7 @@
             <!--==================== QUALIFICATION ====================-->
             <section class="qualifications section" id="qualifications">
                 <h2 class="section__title">Education</h2>
-                <span class="section__subtitle">What I'm Learning</span>
+                <span class="section__subtitle">What I'm learning</span>
 
                 <div class="qualification__container container">
                     <div class="qualification__tabs">
@@ -553,7 +559,7 @@
             <!--==================== PORTFOLIO ====================-->
             <section class="portfolio section" id="portfolio">
                 <h2 class="section__title">My Portfolio</h2>
-                <span class="section__subtitle">My Most Recent Projects</span>
+                <span class="section__subtitle">My most recent projects</span>
 
                             <!--==================== PORTFOLIO 1 ====================-->  
                             <div class="portfolio__content grid swiper-slide">
@@ -626,17 +632,16 @@
                             </div>
                         </div>
                     </div>
-                        <form onsubmit="sendEmail(); reset(); return false;" action="" class="contact__form grid">
-                            <div class="contact_inputs grid">
+                        <form id="contact__form" class="contact_inputs grid" method="post" action="contactform.php">
                                 <div class="contact__content">
                                     <label for="" class="contact__label">Name</label>
                                     <input type="text" class="contact__input">
                                 </div>
+
                                 <div class="contact__content">
                                     <label for="" class="contact__label">Email</label>
                                     <input type="email" class="contact__input">
                                 </div>
-                            </div>
                             
                                 <div class="contact__content">
                                     <label for="" class="contact__label">Message</label>
@@ -644,29 +649,14 @@
                                 </div>
                            
                             <div>
-                                <a href="#" class="button button--flex">
+                                <button type="submit" id="contact__form" class="contact__form contact__form-primary contact__form-lg contact__form-block">
                                     Send Message
-                                    <i class="uil uil-message button__icon"></i>
-                                </a>
+                                    <i class="uil uil-message button__icon"></i> 
+                                </button>
                             </div>
                         </form>
                     </div>
-                    <script src="https://smtpjs.com/v3/smtp.js"></script>
-                    <script>
-                        function sendEmail(){
-                            Email.send({
-                                Host : "smtp.gmail.com",
-                                Username : "umarrasooldev@gmail.com",
-                                Password : "password",
-                                To : 'them@website.com',
-                                From : "you@isp.com",
-                                Subject : "This is the subject",
-                                Body : "And this is the body"
-                            }).then(
-                            message => alert(message)
-                            );
-                        }
-                    </script>
+                    
             </section>
         </main>
 
