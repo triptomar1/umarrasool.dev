@@ -632,15 +632,31 @@
                             </div>
                         </div>
                     </div>
-                        <div class="contact__form"> 
-                        <form class="contact-form" action="mail.php" method="post">
-                            <input type="text" name="name" placeholder="Full name">
-                            <input type="text" name="mail" placeholder="Your e-mail">
-                            <input type="text" name="subject" placeholder="Subject">
-                            <textarea name="message" placeholder="Message"></textarea>
-                            <button type="submit" name="submit">SEND</button>
+                         <form id="contact__form" class="contact_inputs grid" method="post" action="contactform.php">
+                                <div class="contact__content">
+                                    <label for="" class="contact__label">Name</label>
+                                    <input type="text" class="contact__input">
+                                </div>
+
+                                <div class="contact__content">
+                                    <label for="" class="contact__label">Email</label>
+                                    <input type="email" class="contact__input">
+                                </div>
+
+                                <div class="contact__content">
+                                    <label for="" class="contact__label">Message</label>
+                                    <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                                </div>
+
+                            <div>
+                                <button type="submit" id="contact__form" class="contact__form contact__form-primary contact__form-lg contact__form-block">
+                                    Send Message
+                                    <i class="uil uil-message button__icon"></i> 
+                                </button>
+                            </div>
                         </form>
                     </div>
+         
                 
                  </div>
                     
