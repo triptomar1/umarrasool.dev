@@ -195,6 +195,15 @@ img {
   color: var(--title-color);
   font-weight: var(--font-medium);
 }
+.nav__image{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+
+}
 
 .nav__logo:hover{
   color: var(--first-color);
@@ -555,17 +564,17 @@ img {
   width: 75%;
 }
 .skills__css{
-  width: 83%;
+  width: 63%;
 }
 .skills__javascript{
-  width: 75%;
+  width: 55%;
 }
 .skills__react{
-  width: 100%;
+  width: 61%;
 }
 
 .skills__PHP{
-  width: 65%;
+  width: 40%;
 }
 .skills__node{
   width: 50%;
@@ -574,7 +583,7 @@ img {
   width: 38%;
 }
 .skills__python{
-  width: 88%;
+  width: 78%;
 }
 
 .skills__figma{
@@ -603,8 +612,6 @@ img {
 .skills__open .skills__arrow{
   transform: rotate(-180deg);
 }
-
-/*==================== QUALIFICATION ====================*/
 
 
 /*==================== SERVICES ====================*/
@@ -734,42 +741,7 @@ img {
   transform: translateX(.25rem);
 }
 
-.swiper-button-prev::after,
-.swiper-button-next::after{
-  content: '';
-}
 
-.swiper-portfolio-icon{
-  font-size: 2rem;
-  color: var(--first-color);
-}
-
-.swiper-button-prev{
-  left: -.5rem
-}
-
-.swiper-button-next{
-  right: -.5rem
-}
-
-.swiper-container-horizontal > .swiper-pagination-bullets{
-  bottom: -2.5rem
-}
-
-.swiper-pagination-bullet-active{
-  background-color: var(--first-color);
-}
-
-.swiper-button-prev,
-.swiper-button-next,
-.swiper-pagination-bullet{
-  outline: none
-}
-
-/*==================== PROJECT IN MIND ====================*/
-
-
-/*==================== TESTIMONIAL ====================*/
 
 
 /*==================== CONTACT ME ====================*/
@@ -811,12 +783,18 @@ img {
 }
 
 .contact__form{
-  font-size: var(--normal-font-size);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+.contact__button{
+  color: var(--input-color);
   font-family: var(--body-font);
-  color: var(--title-color);
+  font-size: var(--normal-font-size);
+  border-radius: .5rem;
   padding: .75rem 1rem .25rem;
 }
-
 .contact__input{
   width: 100%;
   background-color: var(--input-color);
@@ -1184,18 +1162,6 @@ img {
 
   .portfolio__content{
     column-gap: 5rem;
-  }
-  .swiper-portfolio-icon{
-    font-size: 3.5rem;
-  }
-  .swiper-button-prev{
-    left: -3.5rem;
-  }
-  .swiper-button-next{
-    right: -3.5rem;
-  }
-  .swiper-container-horizontal > .swiper-pagination-bullets{
-    bottom: -4.5rem;
   }
 
   .contact__form{
