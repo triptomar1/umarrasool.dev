@@ -1168,4 +1168,7 @@ img {
   .contact__inputs{
     grid-template-columns: repeat(2, 1fr);
   }
+  .home__data{
+    max-width: 1080px;
+  }
 }
